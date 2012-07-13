@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="java-members" deleted="false" description="generate equals, hashCode and toString with builder by reflection" enabled="true" name="builder equals hashcode reflection">${importEqualsBuilder:import(org.apache.commons.lang3.builder.EqualsBuilder)}@Override
+public boolean equals(Object obj) {
+	return EqualsBuilder.reflectionEquals(this, obj);
+}
+
+${importHashCodeBuilder:import(org.apache.commons.lang3.builder.HashCodeBuilder)}@Override
+public int hashCode() {
+	return HashCodeBuilder.reflectionHashCode(${17}, ${37}, this);
+}
+
+${importToStringBuilder:import(org.apache.commons.lang3.builder.ToStringBuilder, org.apache.commons.lang3.builder.ToStringStyle)}@Override
+public String toString() {
+	return ToStringBuilder.reflectionToString(this, ToStringStyle.${DEFAULT_STYLE});
+}
+${cursor}</template></templates>

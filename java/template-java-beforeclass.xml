@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="java-members" deleted="false" description="set up before test class" enabled="true" name="beforeclass">@${beforeType:newType(org.junit.BeforeClass)}
+public void setUpBeforeClass() throws Exception {
+    ${cursor}
+}</template></templates>

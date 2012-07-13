@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="java-statements" deleted="false" description="if local var == null block" enabled="true" name="ifnull">if (${localVar} == null) {
+	${cursor}
+}</template></templates>

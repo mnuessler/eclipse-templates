@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="java-statements" deleted="false" description="log message" enabled="true" name="log">${log:field(org.slf4j.Logger)}.${level:link(debug, info, warn, error)}("${msg}"${});
+${cursor}</template></templates>

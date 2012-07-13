@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="java-members" deleted="false" description="test method (JUnit 4)" enabled="true" id="org.eclipse.jdt.ui.templates.test_junit4" name="test">@${testType:newType(org.junit.Test)}
+public void ${testName}() throws Exception {
+	${assertImport:importStatic('org.junit.Assert.*')}${matchersImport:importStatic('org.hamcrest.Matchers.*')}${mockImport:importStatic('org.easymock.EasyMock.*')}${cursor}
+}</template></templates>

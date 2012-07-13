@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="java-members" deleted="false" description="generate equals, hashCode and toString with builder" enabled="true" name="builder equals hashcode">${importEqualsBuilder:import(org.apache.commons.lang3.builder.EqualsBuilder)}@Override
+public boolean equals(Object obj) {
+	if (obj == null) { return false; }
+	if (obj == this) { return true; }
+	if (obj.getClass() != getClass()) { return false; }
+	${type:enclosing_type} rhs = (${type}) obj;
+	return new EqualsBuilder()
+	.appendSuper(super.equals(obj))
+	.append(this.${field1:field}, rhs.${field1})
+	.append(this.${field2:field}, rhs.${field2})
+	.append(this.${field3:field}, rhs.${field3})${cursor}
+	.isEquals();
+}
+${importHashCodeBuilder:import(org.apache.commons.lang3.builder.HashCodeBuilder)}@Override
+public int hashCode() {
+	return new HashCodeBuilder(${17}, ${37})
+	.append(${field1})
+	.append(${field2})
+	.append(${field3})
+	.toHashCode();
+}
+${importToStringBuilder:import(org.apache.commons.lang3.builder.ToStringBuilder)}${importToStringStyle:import(org.apache.commons.lang3.builder.ToStringStyle)}@Override
+public String toString() {
+	return new ToStringBuilder(this, ToStringStyle.${DEFAULT_STYLE})
+	.append("${field1}", ${field1})
+	.append("${field2}", ${field2})
+	.append("${field3}", ${field3})
+	.toString();
+}</template></templates>
