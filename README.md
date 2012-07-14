@@ -470,6 +470,7 @@ public class Foo {
 builder<CTRL-SPC>
 
 }
+```
 
 expands to
 
