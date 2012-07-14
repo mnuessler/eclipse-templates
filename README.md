@@ -1,6 +1,6 @@
 # Eclipse Templates #
 
-## Templates ##
+## Templates Descriptions ##
 
 ### Category: Logging ###
 
@@ -31,7 +31,7 @@ public class Foo {
 }
 ```
 
-### Log message ###
+#### Log message ####
 
 Name: `log`
 
@@ -70,33 +70,33 @@ public class Foo {
 }
 ```
 
-### Log debug message ###
+#### Log debug message ####
 
 Name: `logd`
 
 Description: Same as `log` but with fixed DEBUG level.
 
-### Log info message ###
+#### Log info message ####
 
 Name: `logi`
 
 Description: Same as `log` but with fixed INFO level.
 
-### Log warning message ###
+#### Log warning message ####
 
 Name: `logw`
 
 Description: Same as `log` but with fixed WARN level.
 
-### Log error message ###
+#### Log error message ####
 
 Name: `loge`
 
 Description: Same as `log` but with fixed ERRORlevel.
 
-## Category: JUnit Tests ##
+### Category: JUnit Tests ###
 
-### Test method ###
+#### Test method ####
 
 Name: `test`
 
@@ -136,7 +136,7 @@ public class FooTest {
 }
 ```
 
-### Test Setup ###
+#### Test Setup ####
 
 Name: `before`
 
@@ -167,7 +167,7 @@ public class FooTest {
 }
 ```
 
-### Test Teardown ###
+#### Test Teardown ####
 
 Name: `after`
 
