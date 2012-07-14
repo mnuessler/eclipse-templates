@@ -1,6 +1,6 @@
 # Eclipse Templates #
 
-## Templates Descriptions ##
+## Java Templates ##
 
 ### Category: Logging ###
 
@@ -92,7 +92,7 @@ Description: Same as `log` but with fixed WARN level.
 
 Name: `loge`
 
-Description: Same as `log` but with fixed ERRORlevel.
+Description: Same as `log` but with fixed ERROR level.
 
 ### Category: JUnit Tests ###
 
@@ -131,6 +131,43 @@ public class FooTest {
 
 	@Test
 	public void testX() throws Exception {
+	}
+
+}
+```
+
+#### Test Assertion ####
+
+Name: `assert`
+
+Description: Creates a JUnit assertion body. Adds useful static imports.
+
+Example:
+
+This code
+
+```java
+public class FooTest {
+
+	@Test
+	public void testBar() throws Exception {
+		assert<CTRL-SPC>
+	}
+
+}
+```
+
+expands
+
+```java
+import static org.junit.Assert.assertThat;
+import static org.hamcrest.Matchers.*;
+
+public class FooTest {
+
+	@Test
+	public void testBar() throws Exception {
+		assertThat( , Matchers. );
 	}
 
 }
@@ -198,6 +235,67 @@ public class FooTest {
 }
 ```
 
+#### Test Setup Before Class ####
+
+Name: `beforeclass`
+
+Description: Creates a test setup-before-class method body.
+
+Example:
+
+```java
+public class FooTest {
+
+beforeclass<CTRL-SPC>
+
+}
+```
+
+expands to
+
+```java
+import org.junit.BeforeClass;
+
+public class FooTest {
+
+	@BeforeClass
+	public void setUpBeforeClass() throws Exception {
+
+	}
+
+}
+```
+
+#### Test Teardown After Class ####
+
+Name: `afterclass`
+
+Description: Creates a test teardown-after-class method body.
+
+Example:
+
+```java
+public class FooTest {
+
+afterclass<CTRL-SPC>
+
+}
+```
+
+expands to
+
+```java
+import org.junit.AfterClass;
+
+public class FooTest {
+
+	@AfterClass
+	public void tearDownAfterClass() throws Exception {
+
+	}
+
+}
+```
 
 ## Installation ##
 
