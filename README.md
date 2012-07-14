@@ -297,6 +297,89 @@ public class FooTest {
 }
 ```
 
+### Category: Misc ###
+
+#### Iterate over Map ####
+
+Name: `formap`
+
+Description: Iterates over the entries of a `java.util.Map` with a
+foreach loop.
+
+Example:
+
+This code
+
+```java
+Map<String, String> myMap = new HashMap<String, String>();
+
+formap<CTRL-SPC>>
+```
+
+expands to
+
+```java
+Map<String, String> myMap = new HashMap<String, String>();
+
+for (Map.Entry< , > entry : myMap.entrySet()) {
+
+}
+```
+
+#### Check for null ####
+
+Name: `ifnull`
+
+Description: Creates a block to execute when a local variable is
+null.
+
+Example:
+
+This code
+
+```java
+Integer i = null;
+
+ifnull<CTRL-SPC>>
+```
+
+expands to
+
+```java
+Integer i = null;
+
+if (i == null) {
+
+}
+```
+
+#### Check for not-null ####
+
+Name: `ifnotnull`
+
+Description: Creates a block to execute when a local variable is
+not null.
+
+Example:
+
+This code
+
+```java
+Integer i = null;
+
+ifnotnull<CTRL-SPC>>
+```
+
+expands to
+
+```java
+Integer i = null;
+
+if (i != null) {
+
+}
+```
+
 ## Installation ##
 
 
