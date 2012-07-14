@@ -165,7 +165,7 @@ public class FooTest {
 }
 ```
 
-expands
+expands to
 
 ```java
 import static org.junit.Assert.assertThat;
@@ -188,6 +188,8 @@ public class FooTest {
 *Description:* Creates a test setup method body.
 
 *Example:*
+
+This code
 
 ```java
 public class FooTest {
@@ -220,6 +222,8 @@ public class FooTest {
 
 *Example:*
 
+This code
+
 ```java
 public class FooTest {
 
@@ -251,6 +255,8 @@ public class FooTest {
 
 *Example:*
 
+This code
+
 ```java
 public class FooTest {
 
@@ -281,6 +287,8 @@ public class FooTest {
 *Description:* Creates a test teardown-after-class method body.
 
 *Example:*
+
+This code
 
 ```java
 public class FooTest {
@@ -407,6 +415,7 @@ public class Foo {
 builder<CTRL-SPC>
 
 }
+```
 
 expands to
 
