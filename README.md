@@ -1,5 +1,13 @@
 # Eclipse Templates #
 
+Eclipse comes with a bunch of code templates that can save you a lot
+of typing. Most notably the templates `sysout` (expands to
+`System.out.println()`) and `for` / `foreach` to easily iterate over a
+collection or an array.
+
+It is also easy to add custom templates. This repository contains some
+of the templates I created and which might be useful for others too.
+
 ## Java Templates ##
 
 ### Category: Logging ###
@@ -380,8 +388,119 @@ if (i != null) {
 }
 ```
 
+#### Equals- / HashCode- / ToStringBuilder ####
+
+Name: `builder`
+
+Description: Creates `equals()`, `hashCode()` and `toString()` methods
+which make use of the builder classes from [commons-lang][lang]. When
+typing field names (up to 3), those are inserted accordingly in each
+of the 3 methods.
+
+Example:
+
+This code
+
+```java
+public class Foo {
+
+builder<CTRL-SPC>
+
+}
+
+expands to
+
+```java
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
+public class Foo {
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) { return false; }
+		if (obj == this) { return true; }
+		if (obj.getClass() != getClass()) { return false; }
+		Foo rhs = (Foo) obj;
+		return new EqualsBuilder()
+		.appendSuper(super.equals(obj))
+		.append(this.field1, rhs.field1)
+		.append(this.field2, rhs.field2)
+		.append(this.field3, rhs.field3)
+		.isEquals();
+	}
+
+	@Override
+	public int hashCode() {
+		return new HashCodeBuilder(17, 37)
+		.append(field1)
+		.append(field2)
+		.append(field3)
+		.toHashCode();
+	}
+
+	@Override
+	public String toString() {
+		return new ToStringBuilder(this, ToStringStyle.DEFAULT_STYLE)
+		.append("field1", field1)
+		.append("field2", field2)
+		.append("field3", field3)
+		.toString();
+	}
+
+}
+```
+
+#### Equals- / HashCode- / ToStringBuilder with Reflection ####
+
+Name: `builder equals hashcode reflection`
+
+Description: Creates `equals()`, `hashCode()` and `toString()` methods
+which make use of the builder classes from [commons-lang][lang] using
+their reflection-based methods.
+
+Example:
+
+This code
+
+```java
+public class Foo {
+
+builder<CTRL-SPC>
+
+}
+
+expands to
+
+```java
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
+public class Foo {
+
+	@Override
+	public boolean equals(Object obj) {
+		return EqualsBuilder.reflectionEquals(this, obj);
+	}
+
+	@Override
+	public int hashCode() {
+		return HashCodeBuilder.reflectionHashCode(17, 37, this);
+	}
+
+	@Override
+	public String toString() {
+		return ToStringBuilder.reflectionToString(this, ToStringStyle.DEFAULT_STYLE);
+	}
+
+}
+```
+
 ## Installation ##
 
 
 
 [slf4j]: http://www.slf4j.org/
+[lang]: http://commons.apache.org/lang/
