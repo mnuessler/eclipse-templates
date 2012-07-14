@@ -14,11 +14,11 @@ of the templates I created and which might be useful for others too.
 
 #### Create SLF4J Logger ####
 
-Name: `logger`
+*Name:* `logger`
 
-Description: Creates an [SLF4J][slf4j] logger instance with the name of the enclosing class.
+*Description:* Creates an [SLF4J][slf4j] logger instance with the name of the enclosing class.
 
-Example:
+*Example:*
 
 This code
 
@@ -41,12 +41,12 @@ public class Foo {
 
 #### Log message ####
 
-Name: `log`
+*Name:* `log`
 
-Description: Creates a log statement. Lets you select the level from a
+*Description:* Creates a log statement. Lets you select the level from a
 list of choices.
 
-Example:
+*Example:*
 
 This code
 
@@ -80,35 +80,35 @@ public class Foo {
 
 #### Log debug message ####
 
-Name: `logd`
+*Name:* `logd`
 
-Description: Same as `log` but with fixed DEBUG level.
+*Description:* Same as `log` but with fixed DEBUG level.
 
 #### Log info message ####
 
-Name: `logi`
+*Name:* `logi`
 
-Description: Same as `log` but with fixed INFO level.
+*Description:* Same as `log` but with fixed INFO level.
 
 #### Log warning message ####
 
-Name: `logw`
+*Name:* `logw`
 
-Description: Same as `log` but with fixed WARN level.
+*Description:* Same as `log` but with fixed WARN level.
 
 #### Log error message ####
 
-Name: `loge`
+*Name:* `loge`
 
-Description: Same as `log` but with fixed ERROR level.
+*Description:* Same as `log` but with fixed ERROR level.
 
 ### Category: JUnit Tests ###
 
 #### Test method ####
 
-Name: `test`
+*Name:* `test`
 
-Description: Creates a JUnit test method body annotated with `@Test`
+*Description:* Creates a JUnit test method body annotated with `@Test`
 and prompts you for the test method name.
 
 This templates is an enhancement of the standard template `Test`
@@ -119,7 +119,7 @@ following static imports are added:
 * `org.hamcrest.Matchers.*`
 * `org.easymock.EasyMock.*`
 
-Example:
+*Example:*
 
 This code
 
@@ -146,11 +146,11 @@ public class FooTest {
 
 #### Test Assertion ####
 
-Name: `assert`
+*Name:* `assert`
 
-Description: Creates a JUnit assertion body. Adds useful static imports.
+*Description:* Creates a JUnit assertion body. Adds useful static imports.
 
-Example:
+*Example:*
 
 This code
 
@@ -183,11 +183,11 @@ public class FooTest {
 
 #### Test Setup ####
 
-Name: `before`
+*Name:* `before`
 
-Description: Creates a test setup method body.
+*Description:* Creates a test setup method body.
 
-Example:
+*Example:*
 
 ```java
 public class FooTest {
@@ -214,11 +214,11 @@ public class FooTest {
 
 #### Test Teardown ####
 
-Name: `after`
+*Name:* `after`
 
-Description: Creates a test teardown method body.
+*Description:* Creates a test teardown method body.
 
-Example:
+*Example:*
 
 ```java
 public class FooTest {
@@ -245,11 +245,11 @@ public class FooTest {
 
 #### Test Setup Before Class ####
 
-Name: `beforeclass`
+*Name:* `beforeclass`
 
-Description: Creates a test setup-before-class method body.
+*Description:* Creates a test setup-before-class method body.
 
-Example:
+*Example:*
 
 ```java
 public class FooTest {
@@ -276,11 +276,11 @@ public class FooTest {
 
 #### Test Teardown After Class ####
 
-Name: `afterclass`
+*Name:* `afterclass`
 
-Description: Creates a test teardown-after-class method body.
+*Description:* Creates a test teardown-after-class method body.
 
-Example:
+*Example:*
 
 ```java
 public class FooTest {
@@ -309,12 +309,12 @@ public class FooTest {
 
 #### Iterate over Map ####
 
-Name: `formap`
+*Name:* `formap`
 
-Description: Iterates over the entries of a `java.util.Map` with a
+*Description:* Iterates over the entries of a `java.util.Map` with a
 foreach loop.
 
-Example:
+*Example:*
 
 This code
 
@@ -336,12 +336,12 @@ for (Map.Entry< , > entry : myMap.entrySet()) {
 
 #### Check for null ####
 
-Name: `ifnull`
+*Name:* `ifnull`
 
-Description: Creates a block to execute when a local variable is
+*Description:* Creates a block to execute when a local variable is
 null.
 
-Example:
+*Example:*
 
 This code
 
@@ -363,12 +363,12 @@ if (i == null) {
 
 #### Check for not-null ####
 
-Name: `ifnotnull`
+*Name:* `ifnotnull`
 
-Description: Creates a block to execute when a local variable is
+*Description:* Creates a block to execute when a local variable is
 not null.
 
-Example:
+*Example:*
 
 This code
 
@@ -390,14 +390,14 @@ if (i != null) {
 
 #### Equals- / HashCode- / ToStringBuilder ####
 
-Name: `builder`
+*Name:* `builder`
 
-Description: Creates `equals()`, `hashCode()` and `toString()` methods
+*Description:* Creates `equals()`, `hashCode()` and `toString()` methods
 which make use of the builder classes from [commons-lang][lang]. When
 typing field names (up to 3), those are inserted accordingly in each
 of the 3 methods.
 
-Example:
+*Example:*
 
 This code
 
@@ -454,13 +454,13 @@ public class Foo {
 
 #### Equals- / HashCode- / ToStringBuilder with Reflection ####
 
-Name: `builder equals hashcode reflection`
+*Name:* `builder equals hashcode reflection`
 
-Description: Creates `equals()`, `hashCode()` and `toString()` methods
+*Description:* Creates `equals()`, `hashCode()` and `toString()` methods
 which make use of the builder classes from [commons-lang][lang] using
 their reflection-based methods.
 
-Example:
+*Example:*
 
 This code
 
