@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="java-statements" deleted="false" description="iterate over collection" enabled="true" name="formap">for (${iteratorType:newType(java.util.Map)}.Entry&lt;${keyType}, ${valueType}&gt; ${entry} : ${map:localVar(java.util.Map)}.entrySet()) {
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="java-statements" deleted="false" description="iterate over map" enabled="true" name="for">for (${iteratorType:newType(java.util.Map)}.Entry&lt;${argType0:argType(map, 0)}, ${argType1:argType(map, 1)}&gt; ${entry} : ${map:localVar(java.util.Map)}.entrySet()) {
+	${argType0} key = ${entry}.getKey();
+	${argType1} value = ${entry}.getValue();
 	${cursor}
 }
 </template></templates>
